@@ -10,45 +10,41 @@ SQLite == 3.8.2
 
 beautifulsoup4
 
-# **DIRECTORY STRUCTURE**
+# STRUCTURE TO BE FOLLOWED
 
 
 
- **bmtc->templates**->index.html
-
-      ->app.py
+ **BMTC-Project->Templates**->bmtc.html
                              
       ->bmtc.db
                              
-      ->route.py
+      ->busroute.py
       
-      ->fare.py
+      ->busfare.py
       
-      ->route_db.py
+      ->busroutedb.py
       
-      ->fare_db.py
+      ->busfaredb.py
       
-      ->route.pdf
+      ->ER-route.pdf
       
-      ->fare.pdf
+      ->ER-fare.pdf
       
-      ->bmtc.db
+      ->farescrap_10Nov2017.json
       
-      ->bmtc_fare_scrap_Nov_09_2017.json
+      ->routescrap_10Nov2017.json
       
-      ->bmtc_route_scrap_Nov_09_2017.json
-      
-      ->screenshot of webpage
+      ->program.py
    
 # **BUILD INSTRUCTIONS**
-clone the project:- using **git clone https://github.com/Anchal-kansal/bmtc/ **
-1. To fetch, parse the bus stops and timings, and store them in json file and database, run route.py using **python3 route.py** [input example: bus_id could be: 314 and route_id could be 3F]
-2. To fetch, parse the fares list, and store them in json file and database, run fare.py using **python3 fare.py**
+clone the project:- using **git clone https://github.com/kanchan-goel/BMTC-Project/ **
+1. To fetch, parse the bus stops and timings, and store them in json file and database, run busroute.py using **python3 busroute.py** [input example: bus_id could be: 314 and route_id could be 3F]
+2. To fetch, parse the fares list, and store them in json file and database, run fbusare.py using **python3 busfare.py**
 [valid input types are: A/C and General]
-3. To fetch the data from database, run route_db.py and fare_db.py, using **python3 route_db.py** and **python3 fare_db.py**, respectively.
-4. To represent the data on the webpage, run app.py using **python app.py**. Go to browser and run http://127.0.0.1:5000/
+3. To fetch the data from database, run busroutedb.py and busfaredb.py, using **python3 busroutedb.py** and **python3 busfaredb.py**, respectively.
+4. To represent the data on the webpage, run app.py using **python program.py**. Go to browser and run http://127.0.0.1:5000/
 Then, enter bus_id=314 and route_id=3F(for example) and whoosh! the data is visible on the webpage!!!
-**P.S.:- for data to be visible, it must be in the db, and insert query is in route.py, so, before running app.py, run route.py**
+**P.S.:- for data to be visible, it must be in the db, and insert query is in busroute.py, so, before running program.py, run busroute.py**
 
 
     
