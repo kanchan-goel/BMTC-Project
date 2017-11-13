@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title align = "center">Bangalore Metropolitan Transport Corporation</title>
+     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+ 
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet"  type="text/css">
+<style>
+#information{
+    width: 550px;
+    height: 375px;
+    background: white;
+    border-radius: 10px;
+    margin: 100px auto;
+    padding: 20px;
+    box-shadow: 0px 10px  #009de4;
+}
+#bmtc{
+   color:#FFFFFF;
+}
+</style>
+</head>
+ 
+<body style="font-family:Adobe Garamond Premier Pro;
+ font-weight: normal:  
+font-size: 18px;  
+color: #111111;  
+background-color:#4D71A3;">
+
+<div class="container">
+        <div class="header">
+            <br><br>
+            <h1 class="text-center"><i>Bangalore Metropolitan Transport Corporation</i></h1>
+            <br>
+            <br>
+           <h3 class="text-center" id="bmtc"><b>BMTC<b> <i> ezyTrip</i></h3>
+           <h3 class="text-center"  id="bmtc">Easy Travel Information Planner</h3>
+        </div>
+       <br/>
+        <div id ="information">
+            <h2 class="text-center">Bus Route Information</h2>
+              <br>
+            <p class="lead"></p>
+            <form action="/" method="post">
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="bus_no">Bus_no:</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="bus_no" placeholder="Enter route number">
+                   </div>
+              </div>
+<br/>
+              <div class="form-group">
+    <label class="control-label col-sm-2" for="route_no">Route_no:</label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="route_no" placeholder="Enter password">
+                </div>
+             </div>
+             <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+            </form>
+        </div>
+        <br>
+ 
+            
+ 
+        <footer class="footer">
+            <p> Copyright &copy;2013.All rights reserved 
+<br/>
+Despite all our effort there may be a few data errors. We would appreciate if you give us feedback.</p>
+
+    
+
+       </footer>
+ 
+    </div>
+{%if users%}
+    <div class="users" style="margin-left:30%">
+      <h2><b>List of bus routes</b></h2>
+      <table style="width:100%;">
+        {%for route in users%}
+          <tr>
+            <td>{{route[0]}}</td>
+          </tr>   
+          <tr>
+            <td>{{route[1]}}</td>
+          </tr>
+          <tr>
+            <td>{{route[2]}}</td>
+          </tr>
+          <tr>
+            <td>{{route[3]}}</td>
+          </tr>
+        {%endfor%}
+      </table>
+    </div>
+    {%endif%}
+</body>
+ 
+</html>
